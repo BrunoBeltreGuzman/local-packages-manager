@@ -1,0 +1,21 @@
+{
+  "name": "local-packages-manager",
+  "version": "1.0.0",
+  "description": "(LPM) A versatile package manager for local development. Supports all file types.",
+  "bin": {
+    "lpm": "./bin/lpm.js"
+  },
+  "keywords": [
+    "cli",
+    "local",
+    "package",
+    "manager",
+    "development"
+  ],
+  "author": "Bruno Beltre (https://brunobeltre.vercel.app/)",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

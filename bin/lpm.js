@@ -11,13 +11,13 @@ const Log = require("../lib/log");
 function printUsage() {
   Log.info("Usage: lpm <command> <option>");
   Log.info("Commands:");
-  Log.info("init                        Create an install configuration file (package-install.json)");
-  Log.info("new                         Create package-definition.json for current workspace");
-  Log.info("package                     Pack the current package to ~/.lpm/<name>/<version> (short: p)");
-  Log.info("unpackage                   Remove packed package from ~/.lpm/<name>/<version> (short: up)");
-  Log.info("install <name@version>      Install all packages, or specific package by name and optional version (short: i)");
-  Log.info("uninstall <name@version>    Remove a package from current workspace and install config by name and optional version (short: ui)");
-  Log.info("help                        Display this help output");
+  Log.info("init                            Create an install configuration file (package-install.json)");
+  Log.info("new                             Create package-definition.json for current workspace");
+  Log.info("package                         Pack the current package to ~/.lpm/<package>/<version> (short: p)");
+  Log.info("unpackage                       Remove packed package from ~/.lpm/<package>/<version> (short: up)");
+  Log.info("install <package@version>       Install all packages, or specific package by package and optional version (short: i)");
+  Log.info("uninstall <package@version>     Remove a package from current workspace and install config by package and optional version (short: ui)");
+  Log.info("help                            Display this help output (short: --help, -h)");
 }
 
 (async function main() {

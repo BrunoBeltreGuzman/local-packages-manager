@@ -2,16 +2,12 @@
 
 A versatile CLI package manager for local development. Designed to manage and distribute local packages across multiple projects using a parent-child architecture.
 
----
-
 ## Package System
 
 lpm is based on two core concepts:
 
 * **Package Definition (parent)**: defines what a package exposes
 * **Package Install (child)**: defines where and how that package is installed
-
----
 
 ## Package Definition (Parent)
 
@@ -45,8 +41,6 @@ File: `package-definition.json`
 * Defines what files will be shared
 * Can be consumed by multiple projects
 
----
-
 ## Package Install (Child)
 
 Defines where and how a package is installed.
@@ -75,8 +69,6 @@ File: `package-install.json`
 * Defines where files will be copied or linked
 * Can install multiple packages
 
----
-
 ## Relationship (Parent → Child)
 
 ```txt
@@ -102,8 +94,6 @@ lpm install
    * Respect `include` / `exclude`
    * Install them into `installPath`
 
----
-
 ## Example Workflow
 
 ### Step 1: Create a shared package
@@ -125,8 +115,6 @@ Define:
 }
 ```
 
----
-
 ### Step 2: Consume it in another project
 
 ```json
@@ -138,8 +126,6 @@ Define:
   }
 ]
 ```
-
----
 
 ### Step 3: Install
 
@@ -153,8 +139,6 @@ Result:
 common-lib/src  →  project/src/shared
 ```
 
----
-
 ## Command Summary
 
 | Command   | Alias | Description                        |
@@ -167,8 +151,6 @@ common-lib/src  →  project/src/shared
 | uninstall | ui    | Remove installed package           |
 | help      | -h    | Show help                          |
 
----
-
 ## Notes
 
 * `package` must be executed before `install`
@@ -177,8 +159,6 @@ common-lib/src  →  project/src/shared
 
   * `package-definition.json`
   * `package-install.json`
-
----
 
 ## Example
 
@@ -195,8 +175,6 @@ The image shows a typical **lpm workflow with three projects**:
 
   * Uses `package-install.json` to declare dependencies
   * Installs both packages into `src/lib`
-
----
 
 ## Benefits of This Model
 

@@ -13,10 +13,10 @@ function printUsage() {
   Log.info("Commands:");
   Log.info("init                        Create an install configuration file (package-install.json)");
   Log.info("new                         Create package-definition.json for current workspace");
-  Log.info("package                     Pack the current package to ~/.lpm/<name>/<version>");
-  Log.info("unpackage                   Remove packed package from ~/.lpm/<name>/<version>");
-  Log.info("install <name@version>      Install all packages, or specific package by name and optional version");
-  Log.info("uninstall <name@version>    Remove a package from current workspace and install config by name and optional version");
+  Log.info("package                     Pack the current package to ~/.lpm/<name>/<version> (short: p)");
+  Log.info("unpackage                   Remove packed package from ~/.lpm/<name>/<version> (short: up)");
+  Log.info("install <name@version>      Install all packages, or specific package by name and optional version (short: i)");
+  Log.info("uninstall <name@version>    Remove a package from current workspace and install config by name and optional version (short: ui)");
   Log.info("help                        Display this help output");
 }
 
@@ -31,15 +31,19 @@ function printUsage() {
         createDefinition();
         break;
       case "package":
+      case "p":
         pack();
         break;
       case "unpackage":
+      case "up":
         unpackage();
         break;
       case "install":
+      case "i":
         install(option);
         break;
       case "uninstall":
+      case "ui":
         uninstall(option);
         break;
       case "help":

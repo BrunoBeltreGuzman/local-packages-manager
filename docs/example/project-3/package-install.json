@@ -3,10 +3,5 @@
     "name": "project-1",
     "version": "1.0.0",
     "installPath": "src/lib"
-  },
-  {
-    "name": "project-2",
-    "version": "1.0.0",
-    "installPath": "src/lib"
   }
 ]

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const { version } = require('../package.json');
 const init = require("../lib/commands/init");
 const createDefinition = require("../lib/commands/definition");
 const pack = require("../lib/commands/package");
@@ -52,7 +53,7 @@ function printUsage() {
         printUsage();
         break;
       default:
-        Log.info(`lpm version ${require("../package.json").version}`);
+        Log.info(`lpm version: ${version}`);
         if (command) {
           Log.error(`Unknown command: ${command}`);
           printUsage();

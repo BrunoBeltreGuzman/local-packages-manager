@@ -2,6 +2,20 @@
 
 A versatile CLI package manager for local development. Designed to manage and distribute local packages across multiple projects using a parent-child architecture.
 
+## NPM Install Global
+
+Install
+
+```bash
+npm i -g local-packages-manager
+```
+
+Use
+
+```bash
+npm lpm
+```
+
 ## Package System
 
 lpm is based on two core concepts:

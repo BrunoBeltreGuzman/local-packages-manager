@@ -1,6 +1,6 @@
 {
   "name": "local-packages-manager",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "(LPM) A versatile package manager for local development. Supports all file types.",
   "bin": {
     "lpm": "./bin/lpm.js"

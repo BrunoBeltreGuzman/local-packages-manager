@@ -12,8 +12,8 @@ const Log = require("../lib/log");
 function printUsage() {
   Log.info("Usage: lpm <command> <option>");
   Log.info("Commands:");
-  Log.info("init                            Create an install configuration file (package-install.json)");
-  Log.info("new                             Create package-definition.json for current workspace");
+  Log.info("init                            Create an install configuration file (lpm-install.json)");
+  Log.info("new                             Create package definition file (lpm-definition.json) for current workspace");
   Log.info("package                         Pack the current package to ~/.lpm/<package>/<version> (short: p)");
   Log.info("unpackage                       Remove packed package from ~/.lpm/<package>/<version> (short: up)");
   Log.info("install <package@version>       Install all packages, or specific package by package and optional version (short: i)");

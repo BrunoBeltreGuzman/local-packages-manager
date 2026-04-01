@@ -27,7 +27,7 @@ lpm is based on two core concepts:
 
 Defines a reusable local package.
 
-File: `package-definition.json`
+File: `lpm-definition.json`
 
 ```json
 {
@@ -59,7 +59,7 @@ File: `package-definition.json`
 
 Defines where and how a package is installed.
 
-File: `package-install.json`
+File: `lpm-install.json`
 
 ```json
 [
@@ -86,14 +86,14 @@ File: `package-install.json`
 ## Relationship (Parent → Child)
 
 ```txt
-package-definition.json  →  package-install.json
+lpm-definition.json  →  lpm-install.json
         (source)                 (target)
 ```
 
 ### Flow
 
-1. A package is defined using `package-definition.json`
-2. Another project declares it in `package-install.json`
+1. A package is defined using `lpm-definition.json`
+2. Another project declares it in `lpm-install.json`
 3. Running:
 
 ```bash
@@ -157,8 +157,8 @@ common-lib/src  →  project/src/shared
 
 | Command   | Alias | Description                        |
 | --------- | ----- | ---------------------------------- |
-| init      | —     | Create package-install.json        |
-| new       | —     | Create package-definition.json     |
+| init      | —     | Create lpm-install.json        |
+| new       | —     | Create lpm-definition.json     |
 | package   | p     | Pack a package into local registry |
 | unpackage | up    | Remove package from local registry |
 | install   | i     | Install packages into workspace    |
@@ -171,8 +171,8 @@ common-lib/src  →  project/src/shared
 * Packages are resolved from the local registry (`~/.lpm`)
 * Version must match between:
 
-  * `package-definition.json`
-  * `package-install.json`
+  * `lpm-definition.json`
+  * `lpm-install.json`
 
 ## Example
 
@@ -182,12 +182,12 @@ The image shows a typical **lpm workflow with three projects**:
 
 * **project-1** and **project-2** act as **parent packages**
 
-  * Each defines its exports using `package-definition.json`
+  * Each defines its exports using `lpm-definition.json`
   * They expose files from their `lib` folders (e.g. `hello.js`, `math.js`)
 
 * **project-3** acts as the **consumer (child)**
 
-  * Uses `package-install.json` to declare dependencies
+  * Uses `lpm-install.json` to declare dependencies
   * Installs both packages into `src/lib`
 
 ## Benefits of This Model

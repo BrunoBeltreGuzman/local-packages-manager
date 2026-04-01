@@ -13,7 +13,7 @@ npm i -g local-packages-manager
 Use
 
 ```bash
-npm lpm
+lpm
 ```
 
 ## Package System
